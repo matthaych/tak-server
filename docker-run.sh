@@ -1,6 +1,10 @@
 #!/bin/bash
 
 # Sharing for FTSConfig.yaml
+echo "Starting FreeTAKServer"
+
+cat /opt/fts/FTSConfig.yaml
+
 if [[ ! -f "/opt/fts/FTSConfig.yaml" ]]
   then
     python -c "from FreeTAKServer.core.configuration.configuration_wizard import autogenerate_config; autogenerate_config()"
