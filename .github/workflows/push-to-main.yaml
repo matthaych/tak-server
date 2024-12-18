@@ -10,7 +10,7 @@ env:
   IMAGE_BASE: ${{ github.event.repository.name }}"
   IMAGE_TAG: ${{ github.ref_name }}
   OC_REGISTRY: ghcr.io
-  REGISTRY_URL: "ghcr.io/${{ github.event.repository.name }}"
+  REGISTRY_URL: "ghcr.io/matthaych/${{ github.event.repository.name }}"
 
 jobs:
   build:
