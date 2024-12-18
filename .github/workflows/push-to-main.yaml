@@ -11,8 +11,8 @@ name: Publish Docker image
 
 on:
   push:
-    branches:
-      - *
+    tags:
+      - '*'
 
 jobs:
   push_to_registries:
