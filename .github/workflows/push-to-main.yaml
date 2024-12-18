@@ -32,5 +32,5 @@ jobs:
 
     - name: Push image to registry
       run: |
-        docker push $OC_REGISTRY/$IMAGE_BASE:$IMAGE_TAG
-        docker push $OC_REGISTRY/$IMAGE_BASE:latest
+        docker push $REGISTRY_URL/$IMAGE_BASE:$IMAGE_TAG
+        docker push $REGISTRY_URL/$IMAGE_BASE:latest
