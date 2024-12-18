@@ -81,4 +81,3 @@ jobs:
         SANITIZED_TAG="$(echo ${IMAGE_TAG//[^[:alnum:]]/_} | tr '[:upper:]' '[:lower:]' )"
         docker push $OC_REGISTRY/$IMAGE_BASE:$SANITIZED_TAG
         docker push $OC_REGISTRY/$IMAGE_BASE:latest
-
