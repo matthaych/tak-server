@@ -25,7 +25,7 @@ jobs:
     - name: Build the container image
       # can this be converted to podman at some point to be more foss?
       run: |
-        SANITIZED_TAG="$(echo ${IMAGE_TAG//[^[:alnum:]]/_} | tr '[:upper:]' '[:lower:]' )"
+        SANITIZED_TAG="$(echo ${IMAGE_TAG})"
         docker build . --file Dockerfile --tag $REGISTRY_URL:$SANITIZED_TAG --tag $REGISTRY_URL:latest --label "runnumber=${GITHUB_RUN_ID}"
 
     - name: Log in to registry
