@@ -50,6 +50,6 @@ jobs:
         context: .
         file: Dockerfile
         push: true
-        tags: $REGISTRY_URL:$IMAGE_TAG
+        tags: ghcr.io/matthaych/tak-server:$IMAGE_TAG
         labels: runnumber=${GITHUB_RUN_ID}
         platforms: linux/amd64,linux/arm64
