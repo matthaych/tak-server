@@ -47,6 +47,7 @@ jobs:
     - name: Build and Push
       uses: docker/build-push-action@v2
       with:
+        push: true
         platforms: linux/amd64,linux/arm64
-        tags: matthaych/tak-server:$IMAGE_TAG
+        tags: $IMAGE_TAG
         labels: runnumber=${GITHUB_RUN_ID}
